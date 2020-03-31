@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+    type="text/css"
+    />
     <title>Corona Map</title>
 </head>
 <body>
+    <div id="geocoder" class="geocoder"></div>
     <div id='map'></div>
 </body>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhbmRyYWRlYiIsImEiOiJjazhma3RiaXcwMW1kM21wa3FrbjA2YWQ5In0.dKDDDI7ElbxXQ7HfZrLZmg';
     var map = new mapboxgl.Map({

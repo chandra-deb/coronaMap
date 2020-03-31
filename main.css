@@ -3,6 +3,18 @@ body {
     padding: 0;
 }
 
+.geocoder {
+    position: absolute;
+    z-index: 1;
+    /* width: 50%; */
+    right: 50px;
+    /* margin:auto;     */
+    top: 10px;
+    }
+    .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    }
+
 #map {
     width: 100vw;
     height: 100vh;
