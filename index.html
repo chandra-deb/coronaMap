@@ -10,11 +10,19 @@
     href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
     type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <title>Corona Map</title>
 </head>
 <body>
-    <div id="geocoder" class="geocoder"></div>
-    <div id='map'></div>
+    <div class="top-container">
+        <h1>Welcome to Molihua</h1>
+        <h4>A Journey of a Thousand Miles Begins with a Single Step</h4>
+    </div>
+    <div class="map-container">
+        <div id="geocoder" class="geocoder"></div>
+        <div id='map'></div>
+    </div>
+
 </body>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
@@ -33,12 +41,3 @@
 
 
 
-
-
-
-
-    "<div>" +"<h3>" + countryName +"</h3>" + "<h5>" +"Today Cases:" +
-        todayCases+ "</h5>" + "<h5>Today Death:" + todayDeath + "</h5>"+
-        "<h5>Total Cases:" + totalCases+ "</h5>" + "<h5>total Death:" +    
-        totalDeath+ "</h5>" + "</div>"
-    
