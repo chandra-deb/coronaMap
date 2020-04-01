@@ -7,6 +7,10 @@ function updateMap(){
         rsp.data.forEach(array => {
             latitude = array.coordinates.latitude,
             longitude = array.coordinates.longitude,
+            todayCases = array.today.confirmed,
+            todayDeath = array.today.deaths
+            totalCases = array.latest_data.confirmed
+            totalDeath = array.latest_data.deaths
             cases = array.latest_data.confirmed,
             countryName = array.name
             
@@ -20,12 +24,15 @@ function updateMap(){
             // let testingTemplate = "<style>h1{position:absolute; display: none; left:100px;}</style><h1>" + cases + "</h1>";
 
             var popup = new mapboxgl.Popup({
-                offset:[0, -70],
-                closeButton:false
+                offset:[0, -50],
+                closeButton:false,
+                className:"test"
                 }
-            ).setHTML(
-                "<h1>" + cases + countryName + "</h1>"
+            )
+            .setHTML(
+                "<div>" +"<h3>" + countryName +"</h3>" + "<h5>" +"Today Cases:" +todayCases+ "</h5>" + "<h5>Today Death:" + todayDeath + "</h5>"+ "<h5>Total Cases:" + totalCases+ "</h5>" + "<h5>total Death:" +totalDeath+ "</h5>" + "</div>"
             );
+
 
             let marker = new mapboxgl.Marker({
                 draggable: false,
