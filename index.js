@@ -24,7 +24,7 @@ function updateMap(){
             
             // let testingTemplate = "<style>h1{position:absolute; display: none; left:100px;}</style><h1>" + cases + "</h1>";
             var popup = new mapboxgl.Popup({
-                offset:[0, -50],
+                // offset:[, -50],
                 closeButton:false,
                 className:"test"
                 }
